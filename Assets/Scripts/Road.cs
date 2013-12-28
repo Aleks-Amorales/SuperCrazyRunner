@@ -26,22 +26,15 @@ public class Road : MonoBehaviour {
 
 	}
 
-	void Update(){
-		if(Input.GetKeyDown(KeyCode.W)){
-			SetMovingDirection(Vector3.forward);
-		}
-		if(Input.GetKeyDown(KeyCode.S)){
-			SetMovingDirection(Vector3.back);
-		}
-		if(Input.GetKeyDown(KeyCode.A)){
-			SetMovingDirection(Vector3.left);
-		}
-		if(Input.GetKeyDown(KeyCode.D)){
-			SetMovingDirection(Vector3.right);
-		}
+	void FixedUpdate(){
 		foreach(Transform segment in segments){
-			segment.Translate(movingDrection * (-speed * Time.deltaTime),transform);
+			segment.Translate(movingDrection * (-speed),transform);
 		}
+	}
+
+	void Update(){
+
+
 		if(Vector3.Distance(segments.First.Value.position,transform.position)>50){
 			Destroy(segments.First.Value.gameObject);
 			segments.RemoveFirst();
@@ -55,18 +48,14 @@ public class Road : MonoBehaviour {
 				segments.Last.Value.position + generationDrection * segmentSize,
 				Quaternion.LookRotation(generationDrection,Vector3.up));
 
-
-			print(generationDrection);
-//			generationDrection =  segments.Last.Value.GetComponent<Segment>().direction;
 			
 			road.parent = transform;
 			segments.AddLast(road);
 		}
 	}
 
-	void SetMovingDirection(Vector3 direction){
+	public void SetMovingDirection(Vector3 direction){
 		movingDrection = direction;
-		player.forward = direction;
 
 	}
 

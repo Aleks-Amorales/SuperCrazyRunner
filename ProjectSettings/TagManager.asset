@@ -5,6 +5,12 @@ TagManager:
   tags:
   - Segment
   - Floor
+  - Obstacle
+  - Road
+  - Interface
+  - Menu
+  - Game
+  - GameManager
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -19,9 +25,9 @@ TagManager:
   User Layer 10: GroundCheker
   User Layer 11: Player
   User Layer 12: Wall
-  User Layer 13: 
-  User Layer 14: 
-  User Layer 15: 
+  User Layer 13: WallCheker
+  User Layer 14: Obstacle
+  User Layer 15: Bonus
   User Layer 16: 
   User Layer 17: 
   User Layer 18: 

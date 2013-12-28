@@ -4,10 +4,10 @@ using System.Collections;
 public class GroundCheker : MonoBehaviour {
 
 	public bool isGrounded = false;
-
-	void OnTriggerStay(){
+	void OnTriggerEnter(){
 		isGrounded = true;
 	}
+
 	void OnTriggerExit(){
 		isGrounded = false;
 	}

@@ -1,13 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BtnPlay : MonoBehaviour {
+public class BtnPlay : Button {
 
-	private GameManager gameManager;
-	void Start(){
-		gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-	}
-	void OnClick() {
+	protected override void OnClick() {
 		gameManager.Pause();
 	}
 }

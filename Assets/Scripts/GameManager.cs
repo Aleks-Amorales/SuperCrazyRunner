@@ -3,15 +3,16 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
-
+	public GameObject body;
 
 	private GameObject game_interface;
 	private GameObject game_menu;
 	private GameObject player;
 	private GameObject road;
-	
+
 	private bool isOnPause = true;
 	private bool firstStart = true;
+	private bool gameOver = false;
 
 	void Start () {
 
@@ -37,6 +38,8 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void Pause(){
+		if (gameOver)
+			return;
 		if(firstStart){
 			Camera.main.GetComponent<ThirdPersonCamera>().enabled = true;
 			firstStart = false;
@@ -65,6 +68,11 @@ public class GameManager : MonoBehaviour {
 
 	public void GameOver(){
 		print ("Game Over");
-		Application.LoadLevel(Application.loadedLevelName);
+		gameOver = true;
+		road.GetComponent<Road>().enabled = false;
+		player.SetActive(false);
+		body.transform.parent = null;
+		body.SetActive(true);
+		Invoke("Restart",4);
 	}
 }

@@ -29,21 +29,20 @@ public class Player : MonoBehaviour {
 		rigidbody.AddForce(new Vector3(0,-gravity*rigidbody.mass,0));
 		
 	}
-
+	
+	void Update(){
+		Turn(-(int)Input.GetAxisRaw("Horizontal"));
+		animator.SetFloat("Vertical Speed", rigidbody.velocity.y);
+		animator.SetFloat("Horizontal Speed", Input.GetAxisRaw("Horizontal"));
+	}
 	void MoveTo(float directionIndex){
-
+		
 		Vector3 targetVelocity = Vector3.Cross(transform.forward, directionIndex*Vector3.up); 		
 		targetVelocity *= -slideSpeed;
 		Vector3 velocityChange = (targetVelocity - rigidbody.velocity);
 		velocityChange.y = 0;
 		
 		rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
-	}
-
-	void Update(){
-		Turn(-(int)Input.GetAxisRaw("Horizontal"));
-		animator.SetFloat("Vertical Speed", rigidbody.velocity.y);
-		animator.SetFloat("Horizontal Speed", Input.GetAxisRaw("Horizontal"));
 	}
 
 	void Turn(int turnDirectionIndex){
@@ -57,7 +56,7 @@ public class Player : MonoBehaviour {
 		else{
 			transform.forward = Vector3.Cross(transform.forward,turnDirectionIndex*Vector3.up);
 			roadManager.SetMovingDirection(transform.forward);
-			transform.position = Vector3.up;
+//			transform.position = Vector3.up;
 			turnIndex = 0;
 		}
 

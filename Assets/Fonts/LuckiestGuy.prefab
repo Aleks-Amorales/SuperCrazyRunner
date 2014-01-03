@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: SANTBSB_
+  m_Name: LuckiestGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,10 +58,10 @@ MonoBehaviour:
   mReplacement: {fileID: 0}
   mPixelSize: 1
   mSymbols: []
-  mDynamicFont: {fileID: 12800000, guid: 5f1a3d20d7219b745acf5e109a1ebbe8, type: 3}
-  mDynamicFontSize: 32
+  mDynamicFont: {fileID: 12800000, guid: d51d2b14abaa45e429f4eb0c474cfd4f, type: 3}
+  mDynamicFontSize: 62
   mDynamicFontStyle: 0
-  mDynamicFontOffset: -27.375
+  mDynamicFontOffset: 49.75
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

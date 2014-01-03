@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3300000}
   - 65: {fileID: 6500006}
   - 23: {fileID: 2300000}
+  - 136: {fileID: 13600004}
   m_Layer: 14
   m_Name: Obstacle
   m_TagString: Obstacle
@@ -79,6 +80,7 @@ GameObject:
   - 33: {fileID: 3300006}
   - 65: {fileID: 6500004}
   - 23: {fileID: 2300002}
+  - 136: {fileID: 13600002}
   m_Layer: 14
   m_Name: Obstacle
   m_TagString: Obstacle
@@ -97,6 +99,7 @@ GameObject:
   - 33: {fileID: 3300008}
   - 65: {fileID: 6500008}
   - 23: {fileID: 2300004}
+  - 136: {fileID: 13600000}
   m_Layer: 14
   m_Name: Obstacle
   m_TagString: Obstacle
@@ -1550,6 +1553,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c95d3c73ba64d24ebc70d03adce4414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bonusValue: 1
+  score: {fileID: 0}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1561,6 +1566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c95d3c73ba64d24ebc70d03adce4414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bonusValue: 1
+  score: {fileID: 0}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1572,6 +1579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c95d3c73ba64d24ebc70d03adce4414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bonusValue: 1
+  score: {fileID: 0}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1583,6 +1592,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c95d3c73ba64d24ebc70d03adce4414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bonusValue: 1
+  score: {fileID: 0}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1594,6 +1605,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c95d3c73ba64d24ebc70d03adce4414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bonusValue: 1
+  score: {fileID: 0}
+--- !u!136 &13600000
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 7.5
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &13600002
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 7.5
+  m_Direction: 2
+  m_Center: {x: .192574069, y: -.126561552, z: .0679354668}
+--- !u!136 &13600004
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .899999976
+  m_Height: 7.5
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

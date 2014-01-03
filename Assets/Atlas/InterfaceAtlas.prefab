@@ -40,24 +40,96 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 674bf29a5b8291740b38fe065bc47b2c, type: 2}
   sprites:
-  - name: christmasbox
+  - name: sound_on
     outer:
       serializedVersion: 2
       x: 0
-      y: 4
-      width: 101
-      height: 124
+      y: 544
+      width: 196
+      height: 239
     inner:
       serializedVersion: 2
       x: 0
-      y: 4
-      width: 101
-      height: 124
+      y: 544
+      width: 196
+      height: 239
     rotated: 0
-    paddingLeft: .168316826
-    paddingRight: .0990099013
-    paddingTop: .0161290318
-    paddingBottom: .0161290318
+    paddingLeft: .117346942
+    paddingRight: .18877551
+    paddingTop: .0334728025
+    paddingBottom: .0376569033
+  - name: sound_off
+    outer:
+      serializedVersion: 2
+      x: 249
+      y: 785
+      width: 234
+      height: 239
+    inner:
+      serializedVersion: 2
+      x: 249
+      y: 785
+      width: 234
+      height: 239
+    rotated: 0
+    paddingLeft: .05982906
+    paddingRight: .0341880359
+    paddingTop: .0376569033
+    paddingBottom: .0334728025
+  - name: button_background1
+    outer:
+      serializedVersion: 2
+      x: 196
+      y: 623
+      width: 236
+      height: 160
+    inner:
+      serializedVersion: 2
+      x: 207
+      y: 634
+      width: 214
+      height: 137
+    rotated: 0
+    paddingLeft: .0677966103
+    paddingRight: .0677966103
+    paddingTop: .100000001
+    paddingBottom: .100000001
+  - name: pause_button
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 783
+      width: 249
+      height: 241
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 783
+      width: 249
+      height: 241
+    rotated: 0
+    paddingLeft: .0160642564
+    paddingRight: .0120481923
+    paddingTop: .012448133
+    paddingBottom: .0497925319
+  - name: christmasbox 1
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 336
+      width: 180
+      height: 208
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 336
+      width: 180
+      height: 208
+    rotated: 0
+    paddingLeft: .222222224
+    paddingRight: .200000003
+    paddingTop: .0913461521
+    paddingBottom: .139423072
   mCoordinates: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}

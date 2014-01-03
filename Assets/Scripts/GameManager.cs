@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour {
 	private bool isOnPause = true;
 	private bool firstStart = true;
 	private bool gameOver = false;
+	
+
 
 	void Start () {
 
@@ -36,7 +38,16 @@ public class GameManager : MonoBehaviour {
 			Pause();
 		}
 	}
+	void OnActivate(bool off){
+		if(off){
+			AudioListener.volume = 0.0f;
+		}
+		else{
+			AudioListener.volume = 1.0f;
+		}
 
+
+	}
 	public void Pause(){
 		if (gameOver)
 			return;

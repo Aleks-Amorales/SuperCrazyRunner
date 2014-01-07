@@ -43,14 +43,14 @@ MonoBehaviour:
   - name: sound_on
     outer:
       serializedVersion: 2
-      x: 0
-      y: 544
+      x: 249
+      y: 785
       width: 196
       height: 239
     inner:
       serializedVersion: 2
-      x: 0
-      y: 544
+      x: 249
+      y: 785
       width: 196
       height: 239
     rotated: 0
@@ -58,34 +58,16 @@ MonoBehaviour:
     paddingRight: .18877551
     paddingTop: .0334728025
     paddingBottom: .0376569033
-  - name: sound_off
-    outer:
-      serializedVersion: 2
-      x: 249
-      y: 785
-      width: 234
-      height: 239
-    inner:
-      serializedVersion: 2
-      x: 249
-      y: 785
-      width: 234
-      height: 239
-    rotated: 0
-    paddingLeft: .05982906
-    paddingRight: .0341880359
-    paddingTop: .0376569033
-    paddingBottom: .0334728025
   - name: button_background1
     outer:
       serializedVersion: 2
-      x: 196
+      x: 234
       y: 623
       width: 236
       height: 160
     inner:
       serializedVersion: 2
-      x: 207
+      x: 245
       y: 634
       width: 214
       height: 137
@@ -116,13 +98,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 0
-      y: 336
+      y: 387
       width: 180
       height: 208
     inner:
       serializedVersion: 2
       x: 0
-      y: 336
+      y: 387
       width: 180
       height: 208
     rotated: 0
@@ -130,6 +112,24 @@ MonoBehaviour:
     paddingRight: .200000003
     paddingTop: .0913461521
     paddingBottom: .139423072
+  - name: red_cross
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 595
+      width: 234
+      height: 188
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 595
+      width: 234
+      height: 188
+    rotated: 0
+    paddingLeft: .05982906
+    paddingRight: .0341880359
+    paddingTop: .143617019
+    paddingBottom: .21808511
   mCoordinates: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}

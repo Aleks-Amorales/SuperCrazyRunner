@@ -13,23 +13,19 @@ public class GameManager : MonoBehaviour {
 	private bool isOnPause = true;
 	private bool firstStart = true;
 	private bool gameOver = false;
-	
-
 
 	void Start () {
-
 		game_interface = GameObject.FindGameObjectWithTag("Interface");
-		game_menu = GameObject.FindGameObjectWithTag("Menu");
-		player = GameObject.FindGameObjectWithTag("Player");
-		road = GameObject.FindGameObjectWithTag("Road");
-
-		firstStart = true;
-
 		game_interface.SetActive(false);
+
+		game_menu = GameObject.FindGameObjectWithTag("Menu");
 		game_menu.SetActive(true);
-		
+
+		player = GameObject.FindGameObjectWithTag("Player");
 		player.rigidbody.isKinematic = true;
 		player.GetComponent<Player>().enabled = false;
+
+		road = GameObject.FindGameObjectWithTag("Road");
 		road.GetComponent<Road>().enabled = false;
 	}
 
@@ -38,7 +34,7 @@ public class GameManager : MonoBehaviour {
 			Pause();
 		}
 	}
-	void OnActivate(bool off){
+	void Sound(bool off){
 		if(off){
 			AudioListener.volume = 0.0f;
 		}
@@ -55,35 +51,36 @@ public class GameManager : MonoBehaviour {
 			Camera.main.GetComponent<ThirdPersonCamera>().enabled = true;
 			firstStart = false;
 		}
-		isOnPause = !isOnPause;
 
+		isOnPause = !isOnPause;
 
 		game_interface.SetActive(!isOnPause);
 		game_menu.SetActive(isOnPause);
-
+	
 		player.rigidbody.isKinematic = isOnPause;
 		player.GetComponentInChildren<Animator>().enabled = !isOnPause;
 		player.GetComponent<Player>().enabled = !isOnPause;
+
 		road.GetComponent<Road>().enabled = !isOnPause;
 	}
 
 	public void Restart(){
-		print ("Restart");
 		Application.LoadLevel(Application.loadedLevelName);
 	}
 
 	public void Exit(){
-		print ("Exit");
 		Application.Quit();
 	}
 
 	public void GameOver(){
-		print ("Game Over");
 		gameOver = true;
+
 		road.GetComponent<Road>().enabled = false;
 		player.SetActive(false);
+
 		body.transform.parent = null;
 		body.SetActive(true);
+
 		Invoke("Restart",4);
 	}
 }

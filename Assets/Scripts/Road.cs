@@ -3,19 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Road : MonoBehaviour {
-	public Transform player;
 
 	public Transform[] segmentsPrefabs;
 
-	private LinkedList<Transform> segments = new LinkedList<Transform>();
 	public float speed = 10;
-	public Vector3 movingDrection = Vector3.forward;
-	public Vector3 generationDrection = Vector3.forward;
-	
 	public float segmentSize = 50;
-	private Transform firstSegment;
-	private Transform lastSegment;
 
+	private Vector3 movingDrection = Vector3.forward;
+	private Vector3 generationDrection = Vector3.forward;
+
+	private LinkedList<Transform> segments = new LinkedList<Transform>();
 
 	void Start(){
 		for (int i = 0; i < 3; i++) {
@@ -23,7 +20,6 @@ public class Road : MonoBehaviour {
 			road.parent = transform;
 			segments.AddLast(road);
 		}
-
 	}
 
 	void FixedUpdate(){
@@ -33,8 +29,6 @@ public class Road : MonoBehaviour {
 	}
 
 	void Update(){
-
-
 		if(Vector3.Distance(segments.First.Value.position,transform.position)>50){
 			Destroy(segments.First.Value.gameObject);
 			segments.RemoveFirst();
@@ -47,7 +41,6 @@ public class Road : MonoBehaviour {
 				segmentsPrefabs[Random.Range(0,segmentsPrefabs.Length)],
 				segments.Last.Value.position + generationDrection * segmentSize,
 				Quaternion.LookRotation(generationDrection,Vector3.up));
-
 			
 			road.parent = transform;
 			segments.AddLast(road);
@@ -56,7 +49,6 @@ public class Road : MonoBehaviour {
 
 	public void SetMovingDirection(Vector3 direction){
 		movingDrection = direction;
-
 	}
 
 }

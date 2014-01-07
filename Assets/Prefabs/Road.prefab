@@ -43,6 +43,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   speed: .400000006
   movingDrection: {x: 0, y: 0, z: 1}
   generationDrection: {x: 0, y: 0, z: 1}
